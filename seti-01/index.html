@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Teste Frontend Seti</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="../src/styles.css">
+</head>
+
+<body>
+
+	<!-- Header -->
+	<div class="box">
+		<div class="header">
+			<div class="logo"></div>
+			<div class="title"><p>Formulário<br>para compra de<br><span>código</span></p></div>
+	</div>
+	<!-- Fim Header -->
+	
+	<!-- Form Selecão de Linguagens e Quantidade-->
+	<div class="form">
+		<div class="space"></div>
+		<div class="fieldset">
+			<div class="label">Quais linguagens você deseja:</div>
+			<div class="space"></div>	
+			<label><input type="checkbox" value="Vue" class="check"/>Vue</label>
+			<label><input type="checkbox" value="Java" class="check"/>Java</label>
+			<label><input type="checkbox" value="C/C++" class="check"/>C/C++</label>
+			<label><input type="checkbox" value="PHP" class="check"/>PHP</label>
+	</div>			
+
+	<!-- Quantidade  -->
+	<div class="fieldset">
+		<div class="space"></div>
+		<div class="label">Quantos códigos de cada?</div>
+		<div class="space"></div>
+		<div class="counter">
+
+			<svg id="minusBtn" class="qtd-input" onclick="sub()" xmlns="http://www.w3.org/2000/svg" width="42" height="42">
+				<path d="M4.667 0A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 
+				42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667zm28 
+				23.333H9.333v-4.666h23.334v4.666z"/></svg>
+
+			<input id="qtd-display" type="text" placeholder="1" onchange="atualizaContador()"/>
+
+			<svg id="plusBtn" class="qtd-input" onclick="som()" xmlns="http://www.w3.org/2000/svg" width="42" height="42">
+				<path d="M4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 
+				0H4.667A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 
+				42zm4.666-23.333h9.334V9.333h4.666v9.334h9.334v4.666h-9.334v9.334h-4.666v-9.334H9.333v-4.666z" /></svg>
+		</div>
+	</div>
+	<!-- Fim do form de Selecao de Linguagens -->
+			
+	<div class="space"></div>
+	
+	<!-- Observaçõoes -->
+	<div class="fieldset">
+		<div class="label">Observações:</div>
+		<div class="space"></div>
+		<textarea id="obs-text" name="descricao" placeholder="Alguma dúvida? Recomendação?"></textarea>
+	</div>
+	<!-- Fim das Observações -->
+
+	<!-- Footer -->
+	<div class="space"></div>	
+	<div class="footer">
+		<button onclick="enviar()">Enviar</button>		
+	</div>
+
+	<!-- Fim do footer -->
+
+</body>
+<script src="../src/index.js"></script>
+</html>
