@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seti Challenge-2 Frontend</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <!-- Formulario de Cadastro -->
+    <div class="container">
+      <form
+        id="form"
+        class="formCadastro"
+        name="regForm"
+        action="sucesso.html"
+        onsubmit="enviaform()"
+      >
+        <h1>Cadastro</h1>
+        <div class="space"></div>
+
+        <div>
+          <label id="nomeLabel" for="nome"><span>Nome completo: </span></label>
+          <input
+            type="text"
+            name="nome"
+            placeholder="Ex: André L J Souza"
+            id="nome"
+            required
+            onchange="validaNome()"
+          />
+        </div>
+
+        <div>
+          <label id="dataLabel" for="dataNasc"><span>Data de nascimento: </span></label>
+          <input
+            type="date"
+            name="dataNasc"
+            id="nasc"
+            value=""
+            min="1950-01-01"
+            max="2004-01-01"
+            onchange="validaDataNascimento()"
+            required
+          />
+        </div>
+        <div>
+          <label id="userLabel" for="username"><span>Username: </span></label>
+          <input
+            type="text"
+            name="username"
+            placeholder="Ex: aljs539"
+            id="username"
+            onchange="validaUser()"
+            required
+          />
+        </div>
+        <div>
+          <label id="emailLabel" for="email"><span>E-mail: </span></label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="ex@email.com"
+            onchange="validaEmail()"
+            required
+          />
+        </div>
+        <div>
+          <label id="passLabel" for="pass"><span>Senha: </span></label>
+          <input
+            type="password"
+            name="pass"
+            id="pass"
+            placeholder="******"
+            minlength="6"
+            onchange="validaForcaSenha()"
+            required
+          />
+        </div>
+        <div>
+          <label id="confirmPassLabel" for="confirmPass"><span>Confirme sua Senha: </span></label>
+          <input
+            type="password"
+            name="confirmPass"
+            id="confirm_pass"
+            placeholder="******"
+            onchange="validaConfirmacaoSenha()"
+            required
+          />
+        </div>
+
+
+        <div class="space-md"></div>
+        <input id="submit"
+          type="submit"
+          name="Enviar"
+          value="Me inscrever"
+          onclick="enviarForm()"
+        />
+      </form>
+    </div>
+
+    <!--  Scripts -->
+    <script src="src/index.js"></script>
+  </body>
+</html>
